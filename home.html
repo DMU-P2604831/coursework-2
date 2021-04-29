@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <!-- code allows website to be reponsive to mobile screen -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--links page to css -->
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <title></title>
+    <!--code below are links to google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Antonio:wght@500&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:ital,wght@1,500&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Ruda:wght@800&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Antonio:wght@300&family=Fjalla+One&family=Ruda:wght@800&display=swap" rel="stylesheet">
+  </head> <!--makes background colour of the site black -->
+  <body bgcolor="black">
+<!--dive code for navigation with anchor codes which links to each page -->
+    <div class="topnav">
+      <a class="active" href="home.html">HOME</a>
+      <a href="classes.html">CLASSES</a>
+      <a href="contact.html">CONTACT</a>
+    </div>
+
+<!--this image is used for the title of the website -->
+  <img class="banner" src="image\call-of-duty-logo-png-7.png" alt="">
+
+<!--this code creates a solid line-->
+<hr class="solid">
+
+<!--div code contains a image code and a anchor text link code -->
+<div class="contain">
+  <img class="cold" src="image\3626989.jpg" alt="coldwar">
+  <div class="center"><a href="https://www.callofduty.com/uk/en/blackopscoldwar/buy">GET THE GAME</a> </div>
+</div>
+
+<hr class="solid">
+
+<!--div code contains text and paragraph code which will be below image div -->
+<div class="welcome2">
+ WELCOME TO CALL OF DUTY NEWS!
+ <p>where you will be able to access details on new game updates for both Cold War and Warzone. There will also be tournament updates on Call fof Duty league and access to skins and classes for both Cold War and Warzone.</p>
+</div>
+
+<hr class="solid">
+
+<!--div code contains a image code and a anchor text link code -->
+<div class="contain2">
+  <img class="map" src="image\WZ-Season-Three-Announce-001.jpg" alt="">
+  <div class="top-left"><a href="https://www.callofduty.com/uk/en/warzone/download">GET WARZONE FOR FREE</a></div>
+</div>
+
+<hr class="solid">
+
+<!--div code contains text and paragraph code which will be below image div -->
+<div class="newmap">
+  NEW 1984 VERDANSK MAP!
+  <p>New 1984 Versdansk map is now out after the nuke event which destroyed the old map. The new maps consists of major changes from the old one including a different color grade and aesthetic. The new map is more optimised and allows for new combat experiences</p>
+</div
+
+<hr class="solid">
+
+<!--div code contains a image code and a anchor text link code-->
+<div class="contain3">
+  <img class="league" src="image\maxresdefault.jpg" alt="">
+  <div class="center2"><a href="https://www.youtube.com/c/CODLeague/featured">YOUTUBE</a> </div>
+</div>
+
+<!--div code contains text and paragraph code which will be below image div-->
+<div class="newmap">
+  CALL OF DUTY LEAGUE
+  <p>Get ready for week 2 of season 3 of Call fo Duty League! The way to the Stage III Major starts with the London Home Series! Make a point to tune in throughout the span of 4 days, from April 22-25! </p>
+</div
+
+<!--div code cfor slide show container-->
+
+<div class="slideshow-container">
+
+<!--Div codes below are for the images in the slideshow (slide is not automatic) -->
+
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <img src="image\skin1.PNG" style="width:100%">
+  <div class="text"></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <img src="image\skin 2.PNG" style="width:100%">
+  <div class="text"></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <img src="image\skin 3.PNG" style="width:100%">
+  <div class="text"></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <img src="image\skin 4.PNG" style="width:100%">
+  <div class="text"></div>
+</div>
+
+<!-- allows user to click onto which slide they want-->
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+<!--codes below are the buttons used to click on which slide use wants -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+</div>
+
+<!-- javascript below -->
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+<hr class="solid">
+
+
+  </body>
+</html>
